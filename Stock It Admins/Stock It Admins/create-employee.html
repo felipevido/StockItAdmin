@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon" />
+
+  <!--TROCAR FAVICON ACIMA-->
+
+  <title>Stock It Admins - Novo Funcionário</title>
+
+  <!-- ========== Arquivos CSS ========= -->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="assets/css/lineicons.css" />
+  <link rel="stylesheet" href="assets/css/materialdesignicons.min.css" />
+  <link rel="stylesheet" href="assets/css/fullcalendar.css" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <script src="https://kit.fontawesome.com/878b1d88bd.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <!-- ======== Barra Lateral =========== -->
+  <aside class="sidebar-nav-wrapper">
+    <div class="navbar-logo">
+      <a href="index.html">
+        <img class="stockitlogo" src="assets/images/logo/logo.png" alt="logo" />
+        <!--ALTERAR LOGOTIPO DA PÁGINA DEPOIS-->
+      </a>
+    </div>
+    <nav class="sidebar-nav">
+      <ul>
+        <li class="nav-item nav-item-has-children">
+          <a href="#0" class="collapsed" data-bs-toggle="collapse" data-bs-target="#ddmenu_1" aria-controls="ddmenu_1"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-home"></i>
+            <span class="text">&emsp;Dashboard</span>
+          </a>
+          <ul id="ddmenu_1" class="collapsed show dropdown-nav">
+            <li>
+              <a href="index.html"> Stock It Admins </a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item nav-item-has-children">
+          <a href="#0" class="collapsed" data-bs-toggle="collapse" data-bs-target="#ddmenu_2" aria-controls="ddmenu_2"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-rocket"></i>
+            <span class="text">&emsp;Funções</span>
+          </a>
+          <ul id="ddmenu_2" class="collapse dropdown-nav">
+            <li>
+              <a href="validades.html"> Validades </a>
+            </li>
+            <li>
+              <a href="to-do.html"> Pendências </a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a href="invoice.html">
+            <i class="fas fa-funnel-dollar"></i>
+            <span class="text">&emsp;Financeiro</span>
+          </a>
+        </li>
+        <li class="nav-item nav-item-has-children">
+          <a href="#0" class="" data-bs-toggle="collapse" data-bs-target="#ddmenu_3" aria-controls="ddmenu_3"
+            aria-expanded="true" aria-label="Toggle navigation">
+
+            <i class="fas fa-user"></i>
+            <span class="text">&emsp;Usuário</span>
+          </a>
+          <ul id="ddmenu_3" class="collapse dropdown-nav">
+            <li>
+              <a href="signin.html"> Entrar </a>
+            </li>
+            <li>
+              <a href="signup.html"> Criar Conta </a>
+            </li>
+          </ul>
+        </li>
+        <span class="divider">
+          <hr />
+        </span>
+        <li class="nav-item nav-item-has-children">
+
+
+        <li class="nav-item nav-item-has-children">
+          <a href="#0" class="collapsed" data-bs-toggle="collapse" data-bs-target="#ddmenu_5" aria-controls="ddmenu_5"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="icon">
+              <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+                <path
+                  d="M13.75 4.58325H16.5L15.125 6.41659L13.75 4.58325ZM4.58333 1.83325H17.4167C18.4342 1.83325 19.25 2.65825 19.25 3.66659V18.3333C19.25 19.3508 18.4342 20.1666 17.4167 20.1666H4.58333C3.575 20.1666 2.75 19.3508 2.75 18.3333V3.66659C2.75 2.65825 3.575 1.83325 4.58333 1.83325ZM4.58333 3.66659V7.33325H17.4167V3.66659H4.58333ZM4.58333 18.3333H17.4167V9.16659H4.58333V18.3333ZM6.41667 10.9999H15.5833V12.8333H6.41667V10.9999ZM6.41667 14.6666H15.5833V16.4999H6.41667V14.6666Z" />
+              </svg>
+            </span>
+            <span class="text"> Fornecedores </span>
+          </a>
+          <ul id="ddmenu_5" class="collapse dropdown-nav">
+            <li>
+              <a href="form-elements.html"> Novo Pedido </a>
+            </li>
+            <li>
+              <a href="orders.html"> Pedidos </a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a href="tables.html">
+            <span class="icon">
+              <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M4.58333 3.66675H17.4167C17.9029 3.66675 18.3692 3.8599 18.713 4.20372C19.0568 4.54754 19.25 5.01385 19.25 5.50008V16.5001C19.25 16.9863 19.0568 17.4526 18.713 17.7964C18.3692 18.1403 17.9029 18.3334 17.4167 18.3334H4.58333C4.0971 18.3334 3.63079 18.1403 3.28697 17.7964C2.94315 17.4526 2.75 16.9863 2.75 16.5001V5.50008C2.75 5.01385 2.94315 4.54754 3.28697 4.20372C3.63079 3.8599 4.0971 3.66675 4.58333 3.66675ZM4.58333 7.33341V11.0001H10.0833V7.33341H4.58333ZM11.9167 7.33341V11.0001H17.4167V7.33341H11.9167ZM4.58333 12.8334V16.5001H10.0833V12.8334H4.58333ZM11.9167 12.8334V16.5001H17.4167V12.8334H11.9167Z" />
+              </svg>
+            </span>
+            <span class="text">Análises</span>
+          </a>
+        </li>
+        <span class="divider">
+          <hr />
+        </span>
+
+        <li class="nav-item">
+          <a href="notification.html">
+            <i class="fas fa-history"></i>
+            <span class="text">&emsp;Eventos</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </aside>
+  <div class="overlay"></div>
+
+
+
+  <main class="main-wrapper">
+    <header class="header">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-5 col-md-5 col-6">
+            <div class="header-left d-flex align-items-center">
+              <div class="menu-toggle-btn mr-20">
+                <button id="menu-toggle" class="main-btn primary-btn btn-hover">
+                  <i class="lni lni-chevron-left me-2"></i> Painel
+                </button>
+              </div>
+              <div class="header-search d-none d-md-flex">
+                <form action="#">
+                  <input type="text" placeholder="Pesquisar" />
+                  <button><i class="lni lni-search-alt"></i></button>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-7 col-md-7 col-6">
+            <div class="header-right">
+              <!-- Começo estrutura da notificação -->
+              <div class="notification-box ml-15 d-none d-md-flex">
+                <button class="dropdown-toggle" type="button" id="notification" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  <i class="lni lni-alarm"></i>
+                  <span>6</span>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="notification">
+                  <li>
+                    <a href="notification.html">
+                      <div class="image">
+                        <img src="assets/images/lead/wrong-icon.png" alt="Saída de Produto" />
+                      </div>
+                      <div class="content">
+                        <h6>
+                          Saída de Mercadoria
+                          <span class="text-regular">
+                            Novo Evento
+                          </span>
+                        </h6>
+                        <p>
+                          5 unidades de Sabonete Dove sairam do estoque. <strong>Ver detalhes</strong>
+                        </p>
+                        <span>3 horas atrás</span>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="notification.html">
+                      <div class="image">
+                        <img src="assets/images/lead/right-icon.png" alt="Entrada de Mercadoria" />
+                      </div>
+                      <div class="content">
+                        <h6>
+                          Entrada de Mercadoria
+                          <span class="text-regular">
+                            Novo Evento
+                          </span>
+                        </h6>
+                        <p>
+                          1 fardo de Arroz Safra Sul entrou no estoque. <strong>Ver detalhes</strong>
+                        </p>
+                        <span>1 hora atrás</span>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="notification.html">
+                      <div class="image">
+                        <img src="assets/images/lead/return-icon.png" alt="Sinal de Devolução" />
+                      </div>
+                      <div class="content">
+                        <h6>
+                          Devolução ao Estoque
+                          <span class="text-regular">
+                            Novo Evento
+                          </span>
+                        </h6>
+                        <p>
+                          1 unidade de Macarrão Basilar foi devolvida ao estoque. <strong>Ver detalhes</strong>
+                        </p>
+                        <span>1 dia atrás</span>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="notification.html">
+                      <div class="image">
+                        <img src="assets/images/lead/validade.png" alt="Sinal de validade" />
+                      </div>
+                      <div class="content">
+                        <h6>
+                          Validade Atingida
+                          <span class="text-regular">
+                            Novo Evento
+                          </span>
+                        </h6>
+                        <p>
+                          O produto Biscoito Nikito atingiu sua data de validade. <strong>Ver detalhes</strong>
+                        </p>
+                        <span>Alerta Antecipado</span>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="notification.html">
+                      <div class="image">
+                        <img src="assets/images/lead/felipe-vido.png" alt="Perfil de Usuário" />
+                      </div>
+                      <div class="content">
+                        <h6>
+                          Felipe Vido
+                          <span class="text-regular">
+                            Novo Usuário
+                          </span>
+                        </h6>
+                        <p>
+                          Solicitou acesso para usar o aplicativo Stock It. <strong>Clique para liberar</strong>
+                        </p>
+                        <span>1 hora atrás</span>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="notification.html">
+                      <div class="image">
+                        <img src="assets/images/lead/lead-6.png" alt="Perfil de Usuário" />
+                      </div>
+                      <div class="content">
+                        <h6>
+                          Neli Alexandra
+                          <span class="text-regular">
+                            Exclusão
+                          </span>
+                        </h6>
+                        <p>
+                          Solicitou a exclusão do perfil. <strong>Clique para autorizar</strong>
+                        </p>
+                        <span>50 minutos atrás</span>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <!-- Final da estrutura de notificações -->
+              <!-- Inicio estrutura de mensagens -->
+              <div class="header-message-box ml-15 d-none d-md-flex">
+                <button class="dropdown-toggle" type="button" id="message" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  <i class="lni lni-envelope"></i>
+                  <span>3</span>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="message">
+                  <li>
+                    <a href="notification.html">
+                      <div class="image">
+                        <img src="assets/images/lead/plus-icon.png" alt="Sugestão de compra" />
+                      </div>
+                      <div class="content">
+                        <h6>Sugestão de Compra</h6>
+                        <p>O produto <strong>Leite Condensado</strong> está acabando.</p>
+                        <span>Abaixo de 5 unidades</span>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="notification.html">
+                      <div class="image">
+                        <img src="assets/images/lead/offer-icon.png" alt="Sugestão de Oferta" />
+                      </div>
+                      <div class="content">
+                        <h6>Oportunidade de Oferta</h6>
+                        <p>O produto <strong>Amaciante Ypê</strong> está em excesso.</p>
+                        <span>Acima de 6 caixas</span>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="notification.html">
+                      <div class="image">
+                        <img src="assets/images/lead/time-icon.png" alt="Sugestão de compra" />
+                      </div>
+                      <div class="content">
+                        <h6>Oportunidade de Oferta</h6>
+                        <p>O produto <strong>Salgadinho Bacon</strong> está parado no estoque.</p>
+                        <span>2 meses desde a entrada</span>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Estrutura de Filtro -->
+              <div class="filter-box ml-15 d-none d-md-flex">
+                <button title="Função Inativa" class="" type="button" id="filter">
+                  <i class="lni lni-funnel"></i>
+                </button>
+              </div>
+
+              <!-- Estrutura do Perfil -->
+              <div class="profile-box ml-15">
+                <button class="dropdown-toggle bg-transparent border-0" type="button" id="profile"
+                  data-bs-toggle="dropdown" aria-expanded="false">
+                  <div class="profile-info">
+                    <div class="info">
+                      <h6>Felipe Vido</h6>
+                      <div class="image">
+                        <img src="assets/images/profile/felipe-vido.png" alt="Felipe Vido" />
+                        <span class="status"></span>
+                      </div>
+                    </div>
+                  </div>
+                  <i class="lni lni-chevron-down"></i>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profile">
+                  <li>
+                    <a href="settings.html">
+                      <i class="lni lni-user"></i> Ver Perifl
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#0">
+                      <i class="lni lni-notepad" title="Seção em Desenvolvimento"></i> Lembretes
+                    </a>
+                  </li>
+                  <li>
+                    <a href="tables.html"> <i class="lni lni-network"></i> Funcionários </a>
+                  </li>
+                  <li>
+                    <a href="#0"> <i class="lni lni-cog"></i> Documentação </a>
+                  </li>
+                  <li>
+                    <a href="signup.html"> <i class="lni lni-exit"></i> Sair </a>
+                  </li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+      <section class="section">
+        <div class="container-fluid">
+          <!-- ========== IÍCIO DA SEÇÃO DE CONFIGURAÇÕES ========== -->
+          <div class="title-wrapper pt-30">
+            <div class="row align-items-center">
+              <div class="col-md-6">
+                <div class="titlemb-30">
+                  <h2>Funcionários</h2>
+                </div>
+              </div
+              <div class="col-md-6">
+                <div class="breadcrumb-wrapper mb-30">
+                  <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                      <li class="breadcrumb-item">
+                        <a href="tables.html">Análises</a>
+                      </li>
+                      <li class="breadcrumb-item"><a href="#0">Cadastros</a></li>
+                      <li class="breadcrumb-item active" aria-current="page">
+                        Funcionários
+                      </li>
+                    </ol>
+                  </nav>
+                </div>
+              </div>
+     
+            </div>
+   
+          </div>
+        
+          <div class="adjust-table">
+            <div class="col-lg-12">
+              <div class="card-style settings-card-2 mb-30">
+                <div class="title mb-30">
+                  <h6>Nova Funcionário</h6>
+                </div>
+                <form action="#">
+                  <div class="row">
+                   
+                    <div class="col-sm-8">
+                      <div class="input-style-1">
+                        <label>Nome Completo</label>
+                        <input type="text" placeholder="Obrigatório" />
+                      </div>
+                    </div>
+                    <div class="col-sm-4">
+                      <div class="input-style-1">
+                        <label>E-mail</label>
+                        <input type="text" placeholder="@" />
+                      </div>
+                    </div>
+                    <div class="col-sm">
+                      <div class="select-style-1">
+                        <label>Função</label>
+                        <div class="select-position">
+                          <select class="light-bg">
+                            <option value="">Caixa</option>
+                            <option value="">Padeiro</option>
+                            <option value="">Repositor</option>
+                            <option value="">Faxineiro</option>
+                            <option value="">Vendedor</option>
+                            <option value="">Cozinheira</option>
+                            <option value="">Outros</option>
+                    
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm">
+                      <div class="input-style-1">
+                        <label>Contato</label>
+                        <input type="tel" placeholder="(00) 00000-0000" />
+                      </div>
+                    </div>
+                    <div class="col-sm">
+                      <div class="form-check form-switch toggle-switch mb-10">
+                      </div>
+                      <div class="form-check form-switch toggle-switch mb-30">
+                        <input class="form-check-input" type="checkbox" id="toggleSwitch1" />
+                        <label class="form-check-label" for="toggleSwitch1"> <strong>Utiliza o App Stock It</strong></label>
+                      </div>
+                    </div>
+                    
+                    <div class="col-12">
+                      <a href="tables.html" class="main-btn primary-btn btn-hover btn-sm">
+                         Concluir </a>
+                    </div>
+                  </div>
+                </form>
+              </div>
+           
+            </div>
+          </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+      <footer class="footer">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-6 order-last order-md-first">
+              <div class="copyright text-center text-md-start">
+                <p class="text-sm">
+                  Elaborado para fins Institucionais. <strong>Grupo Stock It</strong>
+                </p>
+              </div>
+            </div>
+       
+            <div class="col-md-6">
+              <div
+                class="
+                  terms
+                  d-flex
+                  justify-content-center justify-content-md-end
+                "
+              >
+              <a href="https://stockitapp.netlify.app/index.html" class="text-sm">Aplicativo</a><div></div>
+              <a href="https://stockitplataforma.netlify.app/documentacao.html" class="text-sm ml-15">Documentação </a>
+              <a href="https://stockitapp.netlify.app/envolvidos.html" class="text-sm ml-15">Envolvidos </a>
+              </div>
+            </div>
+          </div>
+   
+        </div>
+      
+      </footer>
+    
+    </main>
+ 
+
+ 
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/Chart.min.js"></script>
+    <script src="assets/js/dynamic-pie-chart.js"></script>
+    <script src="assets/js/moment.min.js"></script>
+    <script src="assets/js/fullcalendar.js"></script>
+    <script src="assets/js/jvectormap.min.js"></script>
+    <script src="assets/js/world-merc.js"></script>
+    <script src="assets/js/polyfill.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
